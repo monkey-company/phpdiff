@@ -1,3 +1,5 @@
+Forked from wudi/phpdiff
+
 phpdiff
 =======
 
@@ -13,14 +15,15 @@ bzip2 http://www.bzip.org/downloads.html
 Download bzip2 and **use make && make install**
 
 ## Installation(安装PHP扩展)
-
-1. git clone https://github.com/EagleWu/phpdiff.git
-2. cd phpdiff
-3. phpize
-4. export LDFLAGS="-lbz2" && ./configure --with-php-config=/php-path/bin/php-config
-5. make && make install
-6. echo "extension=phpdiff.so" >> /php-path/etc/php.ini
-
+```shell
+apt-get install bzip2
+git clone https://github.com/monkey-company/phpdiff.git
+cd phpdiff
+phpize
+export LDFLAGS="-lbz2" && ./configure --with-php-config=/php-path/bin/php-config
+make && make install
+echo "extension=phpdiff.so" >> /php-path/etc/php.ini
+```
 ## Usage(使用方法)
 
 ##### (bool) bsdiff(oldfile, newfile, diff.patch)
